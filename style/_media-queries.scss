@@ -1,0 +1,63 @@
+//Desktop design
+@use 'mixins';
+
+
+@media screen and (min-width: 53em){
+    
+    .header{
+        h1{
+            @include mixins.font-styles(2rem, 200)
+        }
+        h2{
+            @include mixins.font-styles(2rem, 600);
+        }
+    }
+    .cards-section{
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .cards-section{
+        .card{
+            height: 240px;
+            width: 260px;
+        }
+        .card2{
+            margin-bottom: 1rem;
+        }
+        .card1{
+            position: absolute;
+            left: -2%;
+            top: 110px;
+        }
+        .card4{
+            position: absolute;
+            right: -2%;
+            top: 110px;
+            
+        }
+    }    
+}
+
+@media screen and (min-width: 64em){
+    .cards-section{ 
+        .card{
+            width: 320px;
+        }
+        .card2{
+            margin-bottom: 2rem;
+        }
+        .card1{
+            left: -14%;
+            top: 110px;
+        }
+        .card4{
+            right: -14%;
+            top: 110px;
+        }
+    
+}
+}

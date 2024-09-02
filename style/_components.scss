@@ -1,0 +1,60 @@
+@use 'variables' as *;
+@use 'mixins';
+@use 'functions';
+
+.header{
+    max-width: 578px; 
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header{
+    h1{
+        @include mixins.font-styles(1.6rem, 200)
+    }
+    h2{
+        @include mixins.font-styles(1.6rem, 600);
+        margin-bottom: 1.2rem;
+    }
+    p{
+        margin-bottom: 3.5rem;
+    }   
+}
+
+.card{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgb(208, 213, 218);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-top: 4px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.card1{
+    border-color: $cyan;
+}
+.card2{
+    border-color: $red;
+}
+.card3{
+    border-color: $orange;
+}
+.card4{
+    border-color: $blue;
+}
+.card{
+    h3{
+        font-weight: 600;
+        margin-bottom: 0.3em;
+    }
+    p{
+        font-size: functions.px-to-rem(15px);
+        line-height: 1.8em;
+        margin-bottom: 2rem;
+    }
+    figure{
+        align-self: flex-end;   
+    }
+}
